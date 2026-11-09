@@ -1,5 +1,6 @@
 import Rajzfilmek from "../data/Rajzfilmek";
 import type { RajzfilmType } from "../types/Rajzfilm";
+import Rajzfilm from "./Rajzfilm";
 
 const rajzfilmek:RajzfilmType[] = await Rajzfilmek();
 
@@ -37,6 +38,7 @@ export default function RajzfilmLista(){
                     <div className="col-sm-4">Legkorábbi megjelenési év: {getMin()} </div>
                     <div className="col-sm-4">Legkésőbbi megjelenési év: {getMax()}</div>
                 </div>
+                <Rajzfilm/>
             </div>
         </>
     )
