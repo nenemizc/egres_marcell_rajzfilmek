@@ -38,7 +38,7 @@ export default function RajzfilmLista(){
                     <div className="col-sm-4">Legkorábbi megjelenési év: {getMin()} </div>
                     <div className="col-sm-4">Legkésőbbi megjelenési év: {getMax()}</div>
                 </div>
-                <Rajzfilm/>
+                <div className="row"><Rajzfilm/></div>
             </div>
         </>
     )

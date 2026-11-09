@@ -10,12 +10,16 @@ export default function Rajzfilm(){
         <>
             <div>
                 {rajzfilmek.map(film =>
-                    <div key={film.id} className="card">
+                    <div key={film.id} className="card col-sm-3">
                         <div className="card-body">
                             <h2 className="card-title">{film.cim}</h2>
                             <p className="card-text"><i>{film.studio}</i></p>
-                            <p className="card-text"><b>{film.megjelenesEve}</b></p>
-                            <button type="button" className="btn-primary btn">Megjelenés</button>
+                            {!hidden && (
+                                <p className="card-text"><b>{film.megjelenesEve}</b></p>
+                            )}
+                            <button type="button" className="btn-primary btn" onClick={() => setHidden(!hidden)}>
+                                {hidden ? "Megjelenés mutatása" : "Megjelenés elrejtése"}
+                            </button>
                         </div>
                     </div>
                 )}
